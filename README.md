@@ -1,51 +1,135 @@
-🔍 Subdomain Filter Tool
-📌 Description
+# ❄️ WINTER AKI - Active Domain Finder
 
-This tool uses Subfinder to discover subdomains and helps filter them into active and inactive domains for better analysis and reconnaissance.
+A fast and simple Python tool to identify **active domains/subdomains** from a given list using multithreading.
 
-🚀 Features
-🔎 Subdomain enumeration using Subfinder
-✅ Identifies active (live) domains
-❌ Filters out inactive (dead) domains
-⚡ Fast and efficient processing
-🛠️ Easy to use
-📂 Installation
-# Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
+---
 
-# Go to the project directory
-cd your-repo-name
+## 🚀 Features
 
-Make sure you have Subfinder installed:
+* ⚡ Fast scanning using multithreading
+* 🌐 Supports both `http` and `https`
+* 🧠 Smart domain normalization
+* 📂 Accepts file path or filename
+* 🔥 Clean CLI with banner
+* 📊 Progress tracking
+* 💾 Saves results automatically
 
-go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-▶️ Usage
-# Basic usage
-python3 tool.py -d example.com
-Options:
--d → Target domain
-🧠 How It Works
-Uses Subfinder to collect subdomains
-Sends requests to check which domains are alive
-Separates results into:
-Active domains
-Inactive domains
-📁 Output
-active.txt → Contains all live domains
-inactive.txt → Contains all dead domains
-⚠️ Disclaimer
+---
 
-This tool is created for educational and ethical purposes only.
-Do not use it on targets without proper authorization.
+## 📦 Installation
 
-📜 License
+Clone the repository:
 
-No license added — all rights reserved.
+```bash
+             git clone https://github.com/winter3aki/activedomainfinder.git
+             python domainfilter.py
+```
 
-If you want, I can also:
+Install required dependency:
 
-add badges (stars, forks, etc.)
-make it more professional (like top GitHub projects)
-or customize according to your code (Python/Go/etc.)
+```bash
+            pip install requests
+```
 
-Just tell me 👍
+---
+
+## ▶️ Usage
+
+Run the script:
+
+```bash      
+            python domainfilter.py
+```
+
+You will be prompted:
+
+```bash   
+              [?] Enter file path OR file name:
+```
+
+### 📥 Input Example
+
+Your input file should contain domains/subdomains like:
+
+```
+example.com
+test.example.com
+https://google.com
+site.com/path
+```
+
+---
+
+## 📤 Output
+
+* Active domains will be displayed in terminal
+* Saved automatically as:
+
+```
+active.txt
+```
+
+(in the same directory where script is running)
+
+---
+
+## 🛠️ Configuration
+
+You can modify these values inside the script:
+
+```python
+THREADS = 30
+TIMEOUT = 6
+```
+
+---
+
+## ⚙️ How It Works
+
+1. Takes domain list as input
+2. Cleans and normalizes domains
+3. Sends HTTP/HTTPS requests
+4. Checks response status codes
+5. Identifies active domains
+6. Saves results to file
+
+---
+
+## 📌 Supported Status Codes
+
+```
+200, 201, 202, 204,
+301, 302, 303, 307, 308,
+401, 403
+```
+
+---
+
+## ⚠️ Disclaimer
+
+This tool is for **educational and authorized testing purposes only**.
+Do not use it against systems without permission.
+
+---
+
+## 👨‍💻 Author
+
+**Winter AKI**
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+* ⭐ Star the repo
+* 🍴 Fork it
+* 🛠️ Contribute
+
+---
+
+## 🔗 Repository
+
+👉 https://github.com/winter3aki/activedomainfinder.git
+
+---
