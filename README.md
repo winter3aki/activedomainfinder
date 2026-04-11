@@ -1,3 +1,4 @@
+<img width="1024" height="1536" alt="43f9ae50-1110-4e6f-bfae-821fa01b7a9d" src="https://github.com/user-attachments/assets/0def1a5f-b0dd-4473-8f62-1f3a3d7b14f3" />
 # ❄️ WINTER AKI - Active Domain Finder
 
 A fast and simple Python tool to identify **active domains/subdomains** from a given list using multithreading.
